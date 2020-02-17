@@ -26,7 +26,7 @@ func inPlaceShuffle(array: inout [Int]) -> [Int] {
     var count = array.count - 1
     
     while count > 0 {
-        let randomNum = Int.random(in: 0 ..< count)
+        let randomNum = Int.random(in: 0 ... count)
         array.swapAt(count, randomNum)
         count -= 1
     }
@@ -42,7 +42,7 @@ func inPlaceGenericShuffle<T>(array: inout [T]) -> [T] {
     var count = array.count - 1
     
     while count > 0 {
-        let randomNum = Int.random(in: 0 ..< count)
+        let randomNum = Int.random(in: 0 ... count)
         array.swapAt(count, randomNum)
         count -= 1
     }
